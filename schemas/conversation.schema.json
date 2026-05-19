@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://scalvia.dev/schemas/conversation.schema.json",
+  "title": "Conversation",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "conversation_id": { "type": "string" },
+    "lead_id": { "type": "string" },
+    "channel": { "type": "string", "enum": ["whatsapp"] },
+    "provider": { "type": "string", "enum": ["meta_cloud_api"] },
+    "wa_phone": { "type": "string" },
+    "started_at": { "type": "string", "format": "date-time" },
+    "last_message_at": { "type": "string", "format": "date-time" },
+    "status": { "type": "string", "enum": ["open", "waiting_response", "handoff_required", "closed", "opted_out"] },
+    "messages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "message_id": { "type": "string" },
+          "direction": { "type": "string", "enum": ["inbound", "outbound", "internal"] },
+          "text": { "type": "string" },
+          "timestamp": { "type": "string", "format": "date-time" }
+        },
+        "required": ["direction", "text", "timestamp"]
+      }
+    },
+    "summary": { "type": "string" },
+    "current_intent": { "type": "string" },
+    "handoff_required": { "type": "boolean" },
+    "opt_out": { "type": "boolean" }
+  },
+  "required": [
+    "conversation_id",
+    "lead_id",
+    "channel",
+    "provider",
+    "wa_phone",
+    "started_at",
+    "last_message_at",
+    "status",
+    "messages",
+    "handoff_required",
+    "opt_out"
+  ]
+}

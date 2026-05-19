@@ -1,0 +1,14 @@
+{
+  "reply": "Claro. Podemos ayudarte con una asistente por WhatsApp para responder dudas, captar datos y agendar citas. ¿Qué tipo de clínica tienes?",
+  "intent": "service_question",
+  "lead_stage": "new",
+  "action": "ask_followup",
+  "data_to_save": {
+    "industry": "clinica",
+    "service_interest": "WhatsApp AI assistant",
+    "lead_status": "new"
+  },
+  "calendar_request": {},
+  "handoff_required": false,
+  "confidence": 0.91
+}

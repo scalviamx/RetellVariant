@@ -1,0 +1,18 @@
+{
+  "name": "01 - WhatsApp Inbound Router",
+  "status": "placeholder",
+  "description": "Receive Meta WhatsApp Cloud API webhook events, ignore non-message events, validate and normalize inbound messages, then send normalized objects to the AI receptionist workflow.",
+  "nodes_needed": ["Webhook", "Code", "IF", "Execute Workflow", "Error Trigger"],
+  "credentials_needed": ["Meta WhatsApp Cloud API"],
+  "inputs": {
+    "webhook_event": "Meta WhatsApp Cloud API callback payload"
+  },
+  "outputs": {
+    "normalized_message": "Internal whatsapp-message object"
+  },
+  "notes": [
+    "Ignore statuses and read receipts.",
+    "Extract phone, text, type, profile name, timestamp, and WhatsApp message ID.",
+    "Do not log secrets."
+  ]
+}

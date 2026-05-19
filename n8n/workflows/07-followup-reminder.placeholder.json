@@ -1,0 +1,18 @@
+{
+  "name": "07 - Follow-up and Reminder Sender",
+  "status": "placeholder",
+  "description": "Send appointment reminders and follow-up messages when appropriate while respecting opt-out status and WhatsApp template rules.",
+  "nodes_needed": ["Schedule Trigger", "Google Sheets", "Google Calendar", "HTTP Request", "IF"],
+  "credentials_needed": ["Google Sheets OAuth", "Google Calendar OAuth", "Meta WhatsApp Cloud API"],
+  "inputs": {
+    "schedule": "Time-based trigger and CRM rows requiring follow-up"
+  },
+  "outputs": {
+    "send_results": "Reminder and follow-up send results"
+  },
+  "notes": [
+    "Use approved WhatsApp templates when needed.",
+    "Respect opt-out.",
+    "Avoid spam."
+  ]
+}

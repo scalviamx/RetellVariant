@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://scalvia.dev/schemas/ai-response.schema.json",
+  "title": "AI Response",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "reply": { "type": "string" },
+    "intent": { "type": "string" },
+    "lead_stage": { "type": "string" },
+    "action": {
+      "type": "string",
+      "enum": [
+        "send_message",
+        "ask_followup",
+        "save_lead",
+        "check_calendar",
+        "create_appointment",
+        "trigger_handoff",
+        "close_conversation"
+      ]
+    },
+    "data_to_save": { "type": "object" },
+    "calendar_request": { "type": "object" },
+    "handoff_required": { "type": "boolean" },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+  },
+  "required": [
+    "reply",
+    "intent",
+    "lead_stage",
+    "action",
+    "data_to_save",
+    "calendar_request",
+    "handoff_required",
+    "confidence"
+  ]
+}

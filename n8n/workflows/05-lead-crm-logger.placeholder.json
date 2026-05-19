@@ -1,0 +1,17 @@
+{
+  "name": "05 - Lead CRM Logger",
+  "status": "placeholder",
+  "description": "Create or update lead records in Google Sheets while avoiding duplicate leads by WhatsApp phone.",
+  "nodes_needed": ["Execute Workflow Trigger", "Google Sheets", "Code"],
+  "credentials_needed": ["Google Sheets OAuth"],
+  "inputs": {
+    "lead_data": "Lead fields and latest conversation context"
+  },
+  "outputs": {
+    "lead": "Created or updated lead record"
+  },
+  "notes": [
+    "Deduplicate by WhatsApp phone.",
+    "Save lead status, summary, business name, need, next action, and last message timestamp."
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "client_id": "scalvia-demo",
+  "business_name": "Scalvia",
+  "assistant_name": "Sofia",
+  "industry": "AI automation agency",
+  "country": "Mexico",
+  "timezone": "America/Mexico_City",
+  "language": "es-MX",
+  "tone": "Profesional, calido, breve y directo",
+  "phone_number_id": "META_PHONE_NUMBER_ID_PLACEHOLDER",
+  "whatsapp_business_account_id": "META_WABA_ID_PLACEHOLDER",
+  "services": [
+    {
+      "name": "WhatsApp AI assistants",
+      "description": "Asistentes de IA para atencion, calificacion y seguimiento por WhatsApp.",
+      "duration_minutes": 30,
+      "price": null,
+      "bookable": true
+    },
+    {
+      "name": "n8n automation",
+      "description": "Automatizacion de flujos internos con integraciones.",
+      "duration_minutes": 30,
+      "price": null,
+      "bookable": true
+    }
+  ],
+  "opening_hours": [
+    {
+      "day": "monday",
+      "open": "09:00",
+      "close": "18:00",
+      "closed": false
+    },
+    {
+      "day": "saturday",
+      "closed": true
+    }
+  ],
+  "booking_rules": {
+    "max_slots_to_offer": 3,
+    "minimum_notice_hours": 4,
+    "default_duration_minutes": 30
+  },
+  "escalation_rules": [
+    "User asks for a human",
+    "Sensitive legal, medical, financial, or urgent topic",
+    "Custom pricing request"
+  ],
+  "faq": [
+    {
+      "question": "Que hace Scalvia?",
+      "answer": "Scalvia crea asistentes de IA y automatizaciones para atender leads, agendar citas y mejorar procesos."
+    }
+  ],
+  "integrations": {
+    "crm": "google_sheets",
+    "calendar": "google_calendar",
+    "notifications": "telegram_or_email"
+  }
+}

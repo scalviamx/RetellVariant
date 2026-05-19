@@ -1,0 +1,18 @@
+{
+  "name": "02 - Scalvia AI Receptionist",
+  "status": "placeholder",
+  "description": "Load lead context and Sofía master prompt, generate structured AI response, decide next action, and return reply plus workflow routing metadata.",
+  "nodes_needed": ["Execute Workflow Trigger", "Google Sheets", "Read Binary/File", "LLM Chat", "Code", "Switch"],
+  "credentials_needed": ["Google Sheets OAuth", "LLM Provider Key", "Meta WhatsApp Cloud API"],
+  "inputs": {
+    "normalized_message": "Internal whatsapp-message object"
+  },
+  "outputs": {
+    "ai_response": "Structured ai-response object"
+  },
+  "notes": [
+    "Use prompts/scalvia-sofia.md as source of truth.",
+    "Validate AI output before taking action.",
+    "Actions include send_message, ask_followup, save_lead, check_calendar, create_appointment, trigger_handoff, close_conversation."
+  ]
+}

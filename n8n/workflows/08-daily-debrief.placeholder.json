@@ -1,0 +1,17 @@
+{
+  "name": "08 - Daily Debrief",
+  "status": "placeholder",
+  "description": "Summarize daily leads, scheduled demos, handoffs, failed conversations, and send an internal summary.",
+  "nodes_needed": ["Schedule Trigger", "Google Sheets", "LLM Chat", "Telegram or Email"],
+  "credentials_needed": ["Google Sheets OAuth", "LLM Provider Key", "Telegram Bot Token or SMTP"],
+  "inputs": {
+    "date": "Reporting date"
+  },
+  "outputs": {
+    "daily_summary": "Internal daily debrief message"
+  },
+  "notes": [
+    "Summarize leads, demos scheduled, handoffs, and errors.",
+    "Do not expose secrets in summaries."
+  ]
+}

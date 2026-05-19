@@ -1,0 +1,18 @@
+{
+  "name": "09 - Error Monitor",
+  "status": "placeholder",
+  "description": "Track failed API calls, malformed payloads, failed calendar bookings, failed WhatsApp sends, and notify the internal team when action is needed.",
+  "nodes_needed": ["Error Trigger", "Code", "Google Sheets", "Telegram or Email"],
+  "credentials_needed": ["Google Sheets OAuth", "Telegram Bot Token or SMTP"],
+  "inputs": {
+    "error_event": "n8n workflow error event"
+  },
+  "outputs": {
+    "error_notification": "Internal alert and structured error log"
+  },
+  "notes": [
+    "Log structured data.",
+    "Do not include secrets.",
+    "Prioritize failed sends, booking failures, malformed payloads, and credential errors."
+  ]
+}

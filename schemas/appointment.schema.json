@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://scalvia.dev/schemas/appointment.schema.json",
+  "title": "Appointment",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "appointment_id": { "type": "string" },
+    "lead_id": { "type": "string" },
+    "calendar_event_id": { "type": ["string", "null"] },
+    "title": { "type": "string" },
+    "start_time": { "type": "string", "format": "date-time" },
+    "end_time": { "type": "string", "format": "date-time" },
+    "timezone": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["requested", "options_sent", "scheduled", "rescheduled", "cancelled", "completed", "no_show"]
+    },
+    "attendees": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string" },
+          "email": { "type": "string" },
+          "phone": { "type": "string" }
+        }
+      }
+    },
+    "location": { "type": "string" },
+    "meeting_link": { "type": ["string", "null"] },
+    "notes": { "type": "string" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "required": [
+    "appointment_id",
+    "lead_id",
+    "title",
+    "start_time",
+    "end_time",
+    "timezone",
+    "status",
+    "created_at",
+    "updated_at"
+  ]
+}

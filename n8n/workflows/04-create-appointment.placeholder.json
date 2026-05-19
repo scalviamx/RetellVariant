@@ -1,0 +1,18 @@
+{
+  "name": "04 - Create Appointment",
+  "status": "placeholder",
+  "description": "Create a Google Calendar event, update CRM, send WhatsApp confirmation, and notify the internal team.",
+  "nodes_needed": ["Execute Workflow Trigger", "Google Calendar", "Google Sheets", "HTTP Request", "Telegram or Email"],
+  "credentials_needed": ["Google Calendar OAuth", "Google Sheets OAuth", "Meta WhatsApp Cloud API", "Telegram Bot Token or SMTP"],
+  "inputs": {
+    "appointment_request": "Lead, selected slot, service, and conversation summary"
+  },
+  "outputs": {
+    "appointment": "Created appointment object"
+  },
+  "notes": [
+    "Calendar event should include lead name, phone, business name, and summary.",
+    "Confirm appointment by WhatsApp.",
+    "Notify internal team."
+  ]
+}

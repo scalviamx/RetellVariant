@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://scalvia.dev/schemas/business-config.schema.json",
+  "title": "Business Config",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "client_id": { "type": "string" },
+    "business_name": { "type": "string" },
+    "assistant_name": { "type": "string" },
+    "industry": { "type": "string" },
+    "country": { "type": "string" },
+    "timezone": { "type": "string" },
+    "language": { "type": "string" },
+    "tone": { "type": "string" },
+    "phone_number_id": { "type": "string" },
+    "whatsapp_business_account_id": { "type": "string" },
+    "services": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "duration_minutes": { "type": "integer", "minimum": 1 },
+          "price": { "type": ["string", "null"] },
+          "bookable": { "type": "boolean" }
+        },
+        "required": ["name", "bookable"]
+      }
+    },
+    "opening_hours": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "day": { "type": "string" },
+          "open": { "type": "string" },
+          "close": { "type": "string" },
+          "closed": { "type": "boolean" }
+        },
+        "required": ["day", "closed"]
+      }
+    },
+    "booking_rules": { "type": "object" },
+    "escalation_rules": { "type": "array", "items": { "type": "string" } },
+    "faq": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "question": { "type": "string" },
+          "answer": { "type": "string" }
+        },
+        "required": ["question", "answer"]
+      }
+    },
+    "integrations": { "type": "object" }
+  },
+  "required": [
+    "client_id",
+    "business_name",
+    "assistant_name",
+    "industry",
+    "country",
+    "timezone",
+    "language",
+    "tone",
+    "services",
+    "opening_hours",
+    "booking_rules",
+    "escalation_rules",
+    "faq",
+    "integrations"
+  ]
+}

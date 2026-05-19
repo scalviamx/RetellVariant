@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://scalvia.dev/schemas/whatsapp-message.schema.json",
+  "title": "WhatsApp Message",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "channel": { "type": "string", "enum": ["whatsapp"] },
+    "provider": { "type": "string", "enum": ["meta_cloud_api"] },
+    "phone": { "type": "string" },
+    "profile_name": { "type": "string" },
+    "message_text": { "type": "string" },
+    "message_type": { "type": "string" },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "wa_message_id": { "type": "string" },
+    "raw_payload": { "type": "object" }
+  },
+  "required": [
+    "channel",
+    "provider",
+    "phone",
+    "profile_name",
+    "message_text",
+    "message_type",
+    "timestamp",
+    "wa_message_id"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://scalvia.dev/schemas/lead.schema.json",
+  "title": "Lead",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "lead_id": { "type": "string" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "source": { "type": "string" },
+    "wa_phone": { "type": "string" },
+    "profile_name": { "type": "string" },
+    "name": { "type": "string" },
+    "business_name": { "type": "string" },
+    "industry": { "type": "string" },
+    "city": { "type": "string" },
+    "main_problem": { "type": "string" },
+    "service_interest": { "type": "string" },
+    "lead_status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "qualified",
+        "demo_scheduled",
+        "waiting_response",
+        "handoff_required",
+        "not_fit",
+        "client",
+        "lost"
+      ]
+    },
+    "urgency": { "type": "string", "enum": ["low", "medium", "high", "urgent", "unknown"] },
+    "budget_range": { "type": "string" },
+    "preferred_contact_time": { "type": "string" },
+    "appointment_date": { "type": ["string", "null"], "format": "date-time" },
+    "appointment_status": {
+      "type": ["string", "null"],
+      "enum": ["requested", "options_sent", "scheduled", "rescheduled", "cancelled", "completed", "no_show", null]
+    },
+    "conversation_summary": { "type": "string" },
+    "handoff_required": { "type": "boolean" },
+    "opt_out": { "type": "boolean" },
+    "last_message_at": { "type": "string", "format": "date-time" },
+    "assigned_to": { "type": "string" },
+    "notes": { "type": "string" }
+  },
+  "required": [
+    "lead_id",
+    "created_at",
+    "updated_at",
+    "source",
+    "wa_phone",
+    "lead_status",
+    "handoff_required",
+    "opt_out",
+    "last_message_at"
+  ]
+}

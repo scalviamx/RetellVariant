@@ -1,0 +1,10 @@
+{
+  "channel": "whatsapp",
+  "provider": "meta_cloud_api",
+  "phone": "521XXXXXXXXXX",
+  "profile_name": "Demo User",
+  "message_text": "Hola, quiero información sobre asistentes de IA para mi clínica",
+  "message_type": "text",
+  "timestamp": "2026-05-18T20:00:00-05:00",
+  "wa_message_id": "wamid.demo"
+}

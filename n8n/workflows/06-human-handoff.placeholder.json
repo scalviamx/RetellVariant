@@ -1,0 +1,18 @@
+{
+  "name": "06 - Human Handoff",
+  "status": "placeholder",
+  "description": "Detect and process human handoff, notify the internal team, mark lead as handoff_required, and optionally pause automation.",
+  "nodes_needed": ["Execute Workflow Trigger", "Google Sheets", "Telegram or Email", "HTTP Request"],
+  "credentials_needed": ["Google Sheets OAuth", "Telegram Bot Token or SMTP", "Meta WhatsApp Cloud API"],
+  "inputs": {
+    "handoff_request": "Lead, reason, summary, and latest message"
+  },
+  "outputs": {
+    "handoff_status": "Notification and CRM update result"
+  },
+  "notes": [
+    "Send short confirmation to the user.",
+    "Notify the internal team with a concise summary.",
+    "Mark lead as handoff_required."
+  ]
+}

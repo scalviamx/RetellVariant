@@ -1,0 +1,50 @@
+{
+  "client_id": "client-demo",
+  "business_name": "Demo Business",
+  "assistant_name": "Demo Assistant",
+  "industry": "demo_industry",
+  "country": "Mexico",
+  "timezone": "America/Mexico_City",
+  "language": "es-MX",
+  "tone": "Profesional, amable, breve y claro",
+  "phone_number_id": "META_PHONE_NUMBER_ID_PLACEHOLDER",
+  "whatsapp_business_account_id": "META_WABA_ID_PLACEHOLDER",
+  "services": [
+    {
+      "name": "Servicio demo",
+      "description": "Descripcion aprobada del servicio.",
+      "duration_minutes": 30,
+      "price": "Por confirmar",
+      "bookable": true
+    }
+  ],
+  "opening_hours": [
+    {
+      "day": "monday",
+      "open": "09:00",
+      "close": "18:00",
+      "closed": false
+    }
+  ],
+  "booking_rules": {
+    "max_slots_to_offer": 3,
+    "minimum_notice_hours": 4,
+    "default_duration_minutes": 30
+  },
+  "escalation_rules": [
+    "User asks for a human",
+    "Sensitive or urgent request",
+    "Question outside approved business data"
+  ],
+  "faq": [
+    {
+      "question": "Pregunta frecuente demo",
+      "answer": "Respuesta aprobada demo."
+    }
+  ],
+  "integrations": {
+    "crm": "google_sheets",
+    "calendar": "google_calendar",
+    "notifications": "telegram_or_email"
+  }
+}
