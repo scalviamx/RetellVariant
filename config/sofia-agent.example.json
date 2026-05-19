@@ -1,0 +1,46 @@
+{
+  "name": "Sofía - Scalvia Internal Voice Test",
+  "language": "es-MX",
+  "status": "documentation_intent",
+  "note": "Dograh agent import/export JSON support must be confirmed. Use this as configuration intent if direct JSON import is not available.",
+  "voice": {
+    "provider": "mock",
+    "voice_id": "replace_me",
+    "style": "warm_professional"
+  },
+  "llm": {
+    "provider": "openai",
+    "model": "gpt-4.1-mini",
+    "temperature": 0.4
+  },
+  "stt": {
+    "provider": "mock",
+    "language": "es-MX"
+  },
+  "tools": {
+    "calendar": {
+      "enabled": false,
+      "mode": "mock"
+    },
+    "n8n_webhook": {
+      "enabled": false,
+      "url_env": "N8N_WEBHOOK_URL"
+    }
+  },
+  "conversation_rules": {
+    "max_questions_before_summary": 5,
+    "one_question_per_turn": true,
+    "avoid_repeated_summaries": true,
+    "no_deep_consulting": true,
+    "no_pricing_promises": true
+  },
+  "data_to_capture": [
+    "name",
+    "phone",
+    "email",
+    "business_type",
+    "interest",
+    "main_pain_point",
+    "summary"
+  ]
+}

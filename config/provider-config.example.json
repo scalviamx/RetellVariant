@@ -1,0 +1,42 @@
+{
+  "status": "documentation_intent",
+  "note": "Dograh provider configuration is primarily managed in the dashboard. Use this file to record intended provider choices for Scalvia tests.",
+  "baseline": {
+    "mode": "web_call",
+    "telephony_provider": "mock",
+    "calendar": "mock",
+    "n8n_webhook": false
+  },
+  "provider_sets": [
+    {
+      "name": "dograh-defaults",
+      "llm": {
+        "provider": "dograh",
+        "model": "default"
+      },
+      "stt": {
+        "provider": "dograh",
+        "language": "es-MX"
+      },
+      "tts": {
+        "provider": "dograh",
+        "voice_id": "default"
+      }
+    },
+    {
+      "name": "openai-deepgram-elevenlabs",
+      "llm": {
+        "provider": "openai",
+        "model": "gpt-4.1-mini"
+      },
+      "stt": {
+        "provider": "deepgram",
+        "language": "es-MX"
+      },
+      "tts": {
+        "provider": "elevenlabs",
+        "voice_id": "replace_me"
+      }
+    }
+  ]
+}
